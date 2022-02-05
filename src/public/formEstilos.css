@@ -1,0 +1,48 @@
+body{
+	background-color: #D1D1D1;
+    border: 10px solid #669999;
+}
+.flex{
+	display: flex;
+	flex-direction: column;
+}
+.container-iputs{
+	position: relative;
+	display: inline;
+}
+.input{
+	padding: 9px 20px;
+	border: none;
+	margin-top: 10px;
+	border-radius: 3px
+
+}
+.span{
+	position: absolute;
+	right:  5px;
+	background-color: #1BDF1B;
+	border-radius: 50%;
+	padding: 2px;
+	font-size: 0.7em;
+	color: #fff;
+	top: 10%;
+
+}
+
+.btn{
+	padding: 8px 60px;
+	cursor: pointer;
+	background-color: #060606;
+	color: #fff;
+	border-radius: 4px;
+	
+}
+
+.hidden-checkmark{
+	display: none;
+}
+
+.color-red{
+	background-color: #E91616
+}
+

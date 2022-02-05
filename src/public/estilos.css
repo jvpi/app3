@@ -1,0 +1,110 @@
+body{
+	font-family: 'Raleway', sans-serif;
+}
+
+.nav{
+	background: linear-gradient(to right, #334d50, #cbcaa5);
+	padding: 30px;
+	box-shadow: rgba(99, 99, 99, 0.5) 0px 5px 8px 0px;
+}
+.btn{
+	color:#fff;
+	text-decoration: none;
+	font-size: 1.2em;
+}
+
+.container-form{
+	position: relative;
+	margin-top: 20px;
+}
+.form{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+
+}
+.border-form{
+	border: 1px solid #202122;
+	position: absolute;
+	width: 40%;
+	padding: 10px;
+	right: 10px;
+
+}
+.form-inputs{
+  margin: 8px;
+  padding: 7px;
+  padding-left: 25px;
+  background-color: #F3F0F0;
+  border: 1px solid #202122;
+  outline: none;
+}
+
+.form-submit{
+  background: linear-gradient(to right, #16222a, #3a6073);
+  padding: 7px;
+  padding-left: 25px;
+  cursor: pointer;
+  color: #fff;
+  margin: 8px;
+}
+
+table{
+  text-align: left;
+  border-collapse: collapse;
+  padding: 20px;
+  background-color: #161616;
+  color: #fff;
+  table-layout: fixed;
+  width: 50%;
+}
+thead{
+	border-bottom: 1px solid #fff;
+	
+}
+thead th:nth-child(5) {
+display: block;
+width: 151%;
+background-color: rgb(68, 68, 68);
+text-align: center;
+  
+}
+th,td{
+	padding: 20px;
+}
+
+tbody tr:nth-child(even){
+	background-color: rgb(68, 68, 68)
+}	
+tbody tr:hover{
+	background-color: rgba(57,162,219);
+}
+.fondo-black{
+	
+	background-color: rgb(68, 68, 68)
+}
+.btn{
+	color: #fff;
+}
+.span{
+	position: absolute;
+	right:  10px;
+	background-color: #1BDF1B;
+	border-radius: 50%;
+	padding: 2px;
+	font-size: 0.7em;
+	color: #fff;
+	top: 10%;
+
+}
+.hidden-checkmark{
+	display: none;
+}
+
+.color-red{
+	background-color: #E91616
+}
+.container-iputs{
+	position: relative;
+	display: inline;
+}

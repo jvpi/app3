@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/css/formActualizar.css">
+	<link rel="stylesheet" href="/css/normalize.css">
+	
+	<script src="/js/obtenerInfoLS.js" defer></script>
+	<script src="/js/validarFormActualizar.js" defer></script>
+	<title>Document</title>
+</head>
+<body>
+	
+	<form  class='form' id='form' method="POST" action=<%= `/actualizar/${mensaje.id}` %>>
+		<h1 class="">Actualizar datos</h1>
+		<input type="text" name="nombre" id="nombre" class="inputs" value=<%= `${mensaje.nombre}` %>  >
+		<input type="text" name="edad" id="edad" class="inputs" value=<%= `${mensaje.edad}` %> >
+		<input type="text" name="apellido" id="apellido" class="inputs" value=<%= `${mensaje.apellido}` %> >
+		<div class="container-btn">
+			<input type="submit" value="Actualizar" class="btn-actualizar" >
+			<a href="/" class="btn" id="btn">Cancelar y volver</a>
+		</div>
+		
+	</form>
+	
+</body>
+</html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" as='image' href="/img/clima.jpg">
+	<link rel="stylesheet" href="/css/vista_admi.css">
+	<link rel="stylesheet" href="/css/normalize.css">
+	<link rel="stylesheet" href="/css/formulario.css">
+  <link rel="stylesheet" href="/css/menu-usuario.css">
+  <link rel="stylesheet" href="/css/tabla.css">
+  <link rel="stylesheet" href="icono/iconcheckmark/style.css">
+  <link rel="stylesheet" href="icono/iconcross/style.css">
+  <script src="/index.js" defer></script> 
+  <script src="/js/menu-usuario.js" defer></script>
+  <script src="/js/menu-resposive.js" defer></script>
+  <script src="/js/almacenarLocalStorage.js" defer></script>
+	<title>Document</title>
+</head>
+<body id="body">
+ <div class="cabacera">
+     <div class="logo">
+        <a href="/adm" class="logo-enlace">
+          <img loading="lazy" src="/img/clima.jpg" alt="" class="img" >
+        </a>
+      </div>
+     
+      <div class="menu-usuario" id="menu-usuario">
+        <div class="content-logoInfo">
+          <div class="logo-usuario">
+            <%=  nombreUser[0].toUpperCase() %>
+          </div>
+          <p class="nombre-usuario">
+            <% let primeraletra = nombreUser[0].toUpperCase() %>
+            <% let residuoPalabra =  nombreUser.slice(1) %>
+            <% let unir = primeraletra.concat(residuoPalabra)  %>
+            <%= unir %>
+            </p>
+        </div>
+        <div class="contet-config">
+          <ul class="lista-config">
+            <li class="item-config"><a href="/editar" class="enlaces">Cambiar contraseña</a></li>
+            <li class="item-config"><a href="/logout" class="enlaces">Cerrar sesion</a></li>
+          </ul>
+        
+        </div>
+    </div>
+  </div>
+
+   <div class="content-logout" id="logout">
+  
+      <div class="desplegar-menu" id="desplegar-menu"><%=  nombreUser[0].toUpperCase() %></div>
+
+    </div>
+  
+ <div class="flex">
+ 
+    <nav class="menu">
+    	
+    			<ul class="menu_lista" id="menu_lista">
+    				<li class="menu_elemeto">
+    					<a href="/adm/usuario1" class="menu_enlace">
+    						<span class="span btn-tabla">Tabla1</span>
+    					</a>
+    				</li>
+
+        
+    				<li class="menu_elemeto">
+    					<a href="/adm/usuario2" class="menu_enlace">
+    						<span class="span btn-tabla">Tabla2</span>
+    					</a>
+    				</li>
+    				<li class="menu_elemeto">
+    					<a href="/adm/usuario3" class="menu_enlace">
+    						<span class="span btn-tabla">Tabla3</span>
+    					</a>
+    				</li>
+    			
+    			</ul>
+            <img src="/img/menu.png" alt="" id="img-menu" class="img-menu" >
+            <img src="/img/cross.png" alt="" id="img-cross" class="img-cross" >
+      
+    	</nav>
+
+  <div class="scroll">
+  	 <main class="main">
+      
+       <form action="/add" method="POST" class="form" id='form'>
+          <div class="container-form" id="container-form">
+            <div class="container-iputs" id="container-iputs">
+              <div class="label" id="label">
+                <label for="usuario">Usuario</label>
+              </div>
+              <input type="text"  class="ancho inputs" id="usuario" name="nombre">
+            </div>
+
+            <div class="container-iputs" id="container-iputs2">
+                <div class="label">
+                  <label for="apellido">Apellido</label>
+                </div>
+                <input type="text"  class="ancho inputs" id="apellido" name="apellido">
+             </div>
+
+            <div class="container-iputs" id="container-iputs3">
+              <div class="label">
+                <label for="apellido">Edad</label>
+              </div>
+              <input type="text" class="ancho inputs" id="edad" name="edad">
+            </div>
+
+            <div class="container-btn">
+              <button class="btn">Enviar</button>
+            </div>
+        </div>
+       
+      </form>
+      <div class="datos">
+         <% if (mensaje.length > 0 ) {  %>
+            <% for (var i = 0; i < mensaje.length; i++) {  %>
+            <div class="datos2">
+              <div class="wid">
+                <span class=""> <%= mensaje[i].nombre %> </span>
+              </div>
+              <div class="wid">
+                <span class=""> <%= mensaje[i].edad %> </span>
+              </div>
+              <div class="wid">
+                <span class=""> <%= mensaje[i].apellido %> </span>
+              </div>
+              <span class="">
+                <a class='link link-eliminar'
+                href=<%= `/delete/${mensaje[i].id}`%> >Eliminar</a>
+              </span>
+              <span class="margin">
+                <a class='link link-actializar' 
+                href=<%= `/actualizar/${mensaje[i].id}` %> >Actualizar</a>
+              </span>
+            </div>
+           <% } %> 
+          <% } else { %>
+            <h2>no hay datos</h2>
+          <% } %>
+        
+      </div>
+    </main>
+  </div>
+</div>
+</body>
+</html>

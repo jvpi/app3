@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="/css/form-login.css" as='style'>
+	<link rel="stylesheet" href="/css/normalize.css" as='style'>
+	<script src="/js/validar-form-login.js" defer></script>
+	<title>Document</title>
+</head>
+<body>
+ 
+	<div class="content-form" >
+		<% if (mensaje.length > 0) { %>
+			<h2 class="mensaje"><%= mensaje %> </h2>
+		<% } %>
+		<form action="/login" method="POST" class="form" id="form">
+			<input type="text" name="username" id="inputUsername" class="inputs" placeholder="username">
+			<input type="password" name="password" id="inputPsword" class="inputs" placeholder="contraseña">
+			<button class="btn">LOGIN</button>
+		</form>
+	</div>
+</body>
+</html>

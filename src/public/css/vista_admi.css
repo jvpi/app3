@@ -1,0 +1,155 @@
+body{
+	background-color: #EEF0F1;
+}
+.flex{
+	display: flex;
+	height: 100vh;
+	overflow: hidden;
+	
+}
+.cabacera{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	width: 100%;
+	padding: 10px 0;
+	background-color: #Fff;
+	background-color: #EEF0F1;
+	box-shadow: 1px 0 8px rgba(0, 0, 0, 0.2), 2px 0 10px rgba(0, 0, 0, 0.19)
+}
+
+.content-logout{
+	margin-right: 20px;
+	padding: 10px;
+	position: absolute;
+	z-index: 20;
+	right: 10px;
+	top: 20px;
+	
+	
+}
+.desplegar-menu{
+	width:35px;
+	height: 35px;
+	background-color: red;
+	border-radius: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+
+
+}
+.main{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.scroll{
+	width: 100%;
+}
+
+.menu{
+	width: 20%;
+	background-color: #fff;
+	background-color: #EEF0F1;
+	position: relative;
+	overflow: auto;
+	height: 100vh;
+	box-shadow: 1px 0 8px rgba(0, 0, 0, 0.2), 2px 0 10px rgba(0, 0, 0, 0.19)
+}
+
+.img{
+	width: 25%;
+	margin-left: 20px;
+	border-radius: 50%; 
+}
+
+.menu_lista{
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	width: 100%;
+}
+.menu_elemeto{
+	list-style: none;
+	transition: .3s background ease;
+	text-align: center;
+
+}
+.menu_enlace{
+	text-decoration: none;
+	color: #676B84;
+	font-size: 1.2em;
+	display: inline-block;
+	width: 100%;
+	padding:  8px 0;
+	
+}
+.menu_elemeto:hover{
+	background-color: #EEF0F1
+}
+.img-menu, .img-cross{
+	display: none;
+}
+@media screen and (max-width: 620px){
+	.content-logout{
+		display: none;
+	}
+	.flex{
+		display: block;
+	}
+	.cabacera{
+		display: none;
+	}
+	.menu{
+		width: 100%;
+		height: auto;
+		padding-top: 15px;
+	}
+	.menu_lista{
+		position: initial;
+		width: 100%;
+		display: flex;
+		flex-wrap: wrap;
+		
+	}
+	.menu_elemeto{
+		display: none;
+	}
+
+	.img-menu{
+		display: inline-block;
+		position: relative;
+		left:85%;
+		bottom:5px;
+		cursor: pointer;
+	}
+
+
+}
+
+
+/*clases dinamicas*/
+	.aparecerLista{
+		display: block;
+		margin-left: 10px;
+		
+	}
+	.aparecerCross{
+		display: inline-block;
+		position: relative;
+		left:95%;
+		bottom: 40px;
+		width: 15px;
+		cursor: pointer;
+	}
+
+	.oculatarMenu{
+		display: none;
+	}
+	.aparecerMenu{
+		display: block;
+	}
+

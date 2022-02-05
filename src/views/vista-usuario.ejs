@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="preload" as='image' href="/img/clima.jpg">
+	<link rel="preload" href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" as='style'>
+	<link rel="preload" href="/css/vista-usuario.css" as='style'>
+	<link rel="preload" href="/css/normalize.css" as='style'>
+	<link rel="preload" href="/icono/iconolinkedin/style.css" as='style'>
+	<link rel="preload" href="/icono/iconofacebook/style.css" as='style'>
+	<link rel="stylesheet" href="/css/vista-usuario.css">
+	<link rel="stylesheet" href="/css/normalize.css">
+	<link rel="stylesheet" href="/icono/iconolinkedin/style.css">
+	<link rel="stylesheet" href="/icono/iconofacebook/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap" rel="stylesheet">
+	<title>Document</title>
+</head>
+<body>
+	<section>
+		<header class="header">
+			<figure class="figure">
+				<img  src="/img/clima.jpg" alt="img">
+			</figure>
+			<div class="container-parrafo">
+				<p class="parrafo">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Numquam minus cupiditate aspernatur, molestiae quisquam iste natus inventore </p>
+			</div>
+		</header>
+		<main class="main">
+			<% let longitud =  mensaje.length %>
+			<% for (var i = 0; i < longitud; i++) { %>
+				<% if (mensaje[i].length) { %>
+					<article class="card">
+						<h2 class="tittle">titulo</h2>
+						<p class="card-parrafo"> <%= mensaje[i][mensaje[i].length - 1].nombre  %> 
+							</p>
+							<p class="card-parrafo"> <%= mensaje[i][mensaje[i].length - 1].apellido  %> 
+							</p>
+							<p class="card-parrafo"> <%= mensaje[i][mensaje[i].length - 1].edad  %> 
+							</p>
+					</article>
+					<% } %>
+			<% } %>		
+		</main>
+	</section>
+	<footer class="footer">
+			<div class="container-icons">
+				<a href="#"><span class="icon-facebook"></span></a>
+				<a href="https://www.linkedin.com/in/jesus-parra-571a35180/" target="_blank"><span class="icon-linkedin2"></span></a>
+			</div>
+			<div class="copyright">
+				<p> © Copyright 2021 Company Name. All rights reserved.</p>
+			</div>
+	</footer>
+</body>
+</html>

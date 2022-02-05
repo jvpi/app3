@@ -1,0 +1,43 @@
+.datos{
+	width: 75%;
+	overflow-y: auto;
+	height: 250px;
+	background-color: #fff;
+	border-radius: 5px;
+	margin-top: 10px;
+	padding: 0 15px;
+	
+}
+.datos2{
+	display: flex;
+	justify-content: space-between;
+	border-bottom: 1px solid rgba(205, 202, 202, .6);
+	align-content: center;
+	padding:20px 0;
+	
+}
+.wid{
+
+width: 100px;
+overflow-wrap: break-word;
+}
+.link{
+	text-decoration: none;
+	color: #fff;
+}
+
+.link-eliminar{
+	background-color: #F93232;
+	padding: 10px;
+}
+
+.link-actializar{
+	background-color:#4B7CF7;
+	padding: 10px;
+}
+
+ @media screen and (max-width: 620px){
+ 	.datos{
+ 		height: 150px;
+ 	}
+ }
